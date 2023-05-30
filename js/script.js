@@ -2,7 +2,6 @@
 
 // PROBLEMA: Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi. Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt(). Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
-
 // DICHIARAZIONE DELLE VARIABILI NUMERI CASUALI
 let r_number_one = parseInt(Math.floor(Math.random() * 100) + 1);
 let r_number_two = parseInt(Math.floor(Math.random() * 100) + 1);
@@ -51,32 +50,36 @@ function myFunctionTimer(){
     if (num1 === r_number_one){ 
         document.getElementById("results_one").innerHTML = (`OK, sei riuscito a memorizzare il primo numero: ${r_number_one}`);
     } else {
-        document.getElementById("results_one").innerHTML = (`N.1 ERRATO, riprova.`);
+        document.getElementById("results_one").innerHTML = (`N.1 ERRATO`);
     }
     
     if (num2 === r_number_two){
         document.getElementById("results_two").innerHTML = (`OK, sei riuscito a memorizzare il secondo numero: ${r_number_two}`);
     } else {
-        document.getElementById("results_two").innerHTML = (`N.2 ERRATO, riprova.`);
+        document.getElementById("results_two").innerHTML = (`N.2 ERRATO`);
     }
 
     if (num3 === r_number_three){
         document.getElementById("results_three").innerHTML = (`OK, sei riuscito a memorizzare il terzo numero: ${r_number_three}`);
     } else {
-        document.getElementById("results_three").innerHTML = (`N.3 ERRATO, riprova.`);
+        document.getElementById("results_three").innerHTML = (`N.3 ERRATO`);
     }
 
     if (num4 === r_number_four){
         document.getElementById("results_four").innerHTML = (`OK, sei riuscito a memorizzare il quarto numero: ${r_number_four}`);
     } else {
-        document.getElementById("results_four").innerHTML = (`N.4 ERRATO, riprova.`);
+        document.getElementById("results_four").innerHTML = (`N.4 ERRATO`);
     }
 
     if (num5 === r_number_five){
         document.getElementById("results_five").innerHTML = (`OK, sei riuscito a memorizzare il quinto numero: ${r_number_five}`);
     } else {
-        document.getElementById("results_five").innerHTML = (`N.5 ERRATO, riprova.`);
+        document.getElementById("results_five").innerHTML = (`N.5 ERRATO`);
+    }
+
+    if (num1 === r_number_one && num2 === r_number_two && num3 === r_number_three && num4 === r_number_four && num5 === r_number_five){
+        document.getElementById("results").innerHTML = (`HAI VINTO HAI MEMORIZZATO TUTTI I NUMERI!`);
+    } else { 
+        document.getElementById("results").innerHTML = (`NON HAI MEMORIZZATO TUTTI I NUMERI, RIPROVA.`);
     }
 }
-
-
