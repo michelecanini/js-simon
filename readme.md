@@ -14,6 +14,7 @@
 
 ### SOTTO-PROBLEMA 3: Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt()
     1. far scomparire i numeri dopo la scadenza del timer (display: none?)
+    2. crea una funzione per conternere allert e prompt da creare
     2. crea un allert per avvisare di inserire i numeri
     3. crea 5 prompt con altrettanti messaggi per inserire i numeri memorizzati dall'utente
 
