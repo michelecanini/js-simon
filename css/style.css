@@ -6,3 +6,16 @@ GENERAL SETTING
     margin: 0;
     box-sizing: border-box;
 }
+
+main{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    font-size: 25px;
+    font-weight: 25px;
+    color: white;
+    margin-left: 50px;
+}
