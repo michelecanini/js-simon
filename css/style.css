@@ -7,6 +7,10 @@ GENERAL SETTING
     box-sizing: border-box;
 }
 
+header{
+    text-align: center;
+}
+
 main{
     background-color: blue;
     display: flex;
@@ -14,8 +18,7 @@ main{
 }
 
 div{
-    font-size: 25px;
-    font-weight: 25px;
+    font-size: 50px;
     color: white;
     margin-left: 50px;
 }

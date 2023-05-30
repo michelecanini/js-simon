@@ -7,6 +7,7 @@
     2. creare 5 numeri random in js
     3. collegare i 5 numeri random al dom
     4. successivemente stilizzare in numeri in css
+    5. crea un header con titolo per avvisare l'utente 
 
 ### SOTTO-PROBLEMA 2: Da lì parte un timer di 30 secondi.
     1. crea un timer con la timing function di javascript
@@ -18,3 +19,4 @@
 
 ### SOTTO-PROBLEMA 4: il software dice quanti e quali dei numeri da indovinare sono stati individuati.
     1. crea una funzione per il controllo di uguaglianza tra i numeri randomici e i numeri inseriti dall'utente
+    2. stampa a video e segnala all'utente quanti e quali numeri è riuscito a memorizzare
