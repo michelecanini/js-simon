@@ -9,15 +9,29 @@ document.getElementById("random_number_three").innerHTML = Math.floor(Math.rando
 document.getElementById("random_number_four").innerHTML = Math.floor(Math.random() * 100) + 1;
 document.getElementById("random_number_five").innerHTML = Math.floor(Math.random() * 100) + 1;
 
-// CREAZIONE DEL TIMER
-setTimeout()
+
+// CREAZIONE DEL TIMER PER LA CANCELLAZIONE DEI NUMERI
+setTimeout(myFunctionNumber, 30000);
+
+// FUNZIONE 1 - CANCELLAZIONE DEI NUMERI CON DISPLAY NONE
+function myFunctionNumber(){
+    // CANCELLAZIONE DEI NUMERI CON DISPLAY NONE
+    document.getElementById("random_number_one").style.display = "none";
+    document.getElementById("random_number_two").style.display = "none";
+    document.getElementById("random_number_three").style.display = "none";
+    document.getElementById("random_number_four").style.display = "none";
+    document.getElementById("random_number_five").style.display = "none";
+}
+
+// CREAZIONE DEL TIMER PER I PROMPT
+setTimeout(myFunctionTimer, 31000);
 
 // DICHIARAZIONE DELLE FUNZIONI
 
-// FUNZIONE 1 - CONTENENTE LE VARIABILI CON PROMPT
-function myFunction(){
+// FUNZIONE 2 - CONTENENTE LE VARIABILI CON PROMPT
+function myFunctionTimer(){
 
-    // DICHIARAZIONE DELLE VARIABILI
+    // DICHIARAZIONE DELLE VARIABILI CON PROMPT
     alert("Ciao Benvenuto, per favore inserisci i 5 numeri che hai memorizzato");
     let num1 = prompt("Inserisci il primo numero memorizzato");
     let num2 = prompt("Inserisci il secondo numero memorizzato");
