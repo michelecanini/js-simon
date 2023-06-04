@@ -4,10 +4,16 @@
 
 
 // DICHIARAZIONE DELLE VARIABILI
-let random_number = " "; // dichiarazione contenitore numeri randomici
+
+let random_number = ' '; // dichiarazione contenitore numeri randomici
+let r_number_one = " " + "<br>";
+let r_number_two = " ";
+let r_number_three = " ";
+let r_number_four = " ";
+let r_number_five = " ";
 
 
-// DICHIARAZIONE DELLE FUNZIONI
+// DICHIARAZIONE DELLE FUNZIONI - LOGICA
 
 // FUNZIONE 1 - GENERAZIONE DEL NUMERO RANDOMICO
 function generateRandomNumber(min, max) {
@@ -18,11 +24,10 @@ return Math.floor(Math.random() * (max - min + 1) ) + min;
 for (let i = 0; i < 5; i++){
     random_number += generateRandomNumber(1, 100) + "<br>";
 }
-console.log(random_number)
+console.log(typeof generateRandomNumber(1, 100))
 
 // INSERIMENTO NEL DOM HTML
 document.getElementById("random").innerHTML = random_number;
-
 
 // CREAZIONE DEL TIMER PER LA CANCELLAZIONE DEI NUMERI
 setTimeout(myFunctionNumber, 30000);
@@ -31,30 +36,7 @@ setTimeout(myFunctionNumber, 30000);
 function myFunctionNumber(){
     // CANCELLAZIONE DEI NUMERI CON DISPLAY NONE
     document.getElementById("random").style.display = "none";
-
- /* (SUPERATO)  
-  document.getElementById("random_number_one").style.display = "none";
-    document.getElementById("random_number_two").style.display = "none";
-    document.getElementById("random_number_three").style.display = "none";
-    document.getElementById("random_number_four").style.display = "none";
-    document.getElementById("random_number_five").style.display = "none"; */
 }
-
-/* // CREAZIONE DEI NUMERI RANDOM (SUPERATO)
-let r_number_one = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_two = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_three = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_four = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_five = parseInt(Math.floor(Math.random() * 100) + 1); 
-*/
-
-/* // INSERIMENTO NEL DOM DEI NUMERI CASUALI (SUPERATO)
-document.getElementById("random_number_one").innerHTML = r_number_one;
-document.getElementById("random_number_two").innerHTML = r_number_two;
-document.getElementById("random_number_three").innerHTML = r_number_three;
-document.getElementById("random_number_four").innerHTML = r_number_four;
-document.getElementById("random_number_five").innerHTML = r_number_five;
-*/
 
 // CREAZIONE DEL TIMER PER I PROMPT
 setTimeout(myFunctionTimer, 31000);
@@ -108,3 +90,26 @@ function myFunctionTimer(){
         document.getElementById("results").innerHTML = (`NON HAI MEMORIZZATO TUTTI I NUMERI, RIPROVA.`); 
     }
 } 
+
+/* (SUPERATO)  
+  document.getElementById("random_number_one").style.display = "none";
+    document.getElementById("random_number_two").style.display = "none";
+    document.getElementById("random_number_three").style.display = "none";
+    document.getElementById("random_number_four").style.display = "none";
+    document.getElementById("random_number_five").style.display = "none"; */
+
+/* // CREAZIONE DEI NUMERI RANDOM (SUPERATO)
+let r_number_one = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_two = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_three = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_four = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_five = parseInt(Math.floor(Math.random() * 100) + 1); 
+*/
+
+/* // INSERIMENTO NEL DOM DEI NUMERI CASUALI (SUPERATO)
+document.getElementById("random_number_one").innerHTML = r_number_one;
+document.getElementById("random_number_two").innerHTML = r_number_two;
+document.getElementById("random_number_three").innerHTML = r_number_three;
+document.getElementById("random_number_four").innerHTML = r_number_four;
+document.getElementById("random_number_five").innerHTML = r_number_five;
+*/
