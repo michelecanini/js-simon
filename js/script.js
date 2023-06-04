@@ -2,21 +2,27 @@
 
 // PROBLEMA: Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi. Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt(). Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
-// DICHIARAZIONE DELLE VARIABILI NUMERI CASUALI
-let r_number_one = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_two = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_three = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_four = parseInt(Math.floor(Math.random() * 100) + 1);
-let r_number_five = parseInt(Math.floor(Math.random() * 100) + 1);
 
-// INSERIMENTO NEL DOM DEI NUMERI CASUALI
-document.getElementById("random_number_one").innerHTML = r_number_one;
-document.getElementById("random_number_two").innerHTML = r_number_two;
-document.getElementById("random_number_three").innerHTML = r_number_three;
-document.getElementById("random_number_four").innerHTML = r_number_four;
-document.getElementById("random_number_five").innerHTML = r_number_five;
+// DICHIARAZIONE DELLE VARIABILI
+let random_number = " "; // dichiarazione contenitore numeri randomici
+
 
 // DICHIARAZIONE DELLE FUNZIONI
+
+// FUNZIONE 1 - GENERAZIONE DEL NUMERO RANDOMICO
+function generateRandomNumber(min, max) {
+return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+// CICLO FOR CHE RIPETE 5 VOLTE IL CODICE
+for (let i = 0; i < 5; i++){
+    random_number += generateRandomNumber(1, 100) + "<br>";
+}
+console.log(random_number)
+
+// INSERIMENTO NEL DOM HTML
+document.getElementById("random").innerHTML = random_number;
+
 
 // CREAZIONE DEL TIMER PER LA CANCELLAZIONE DEI NUMERI
 setTimeout(myFunctionNumber, 30000);
@@ -24,12 +30,31 @@ setTimeout(myFunctionNumber, 30000);
 // FUNZIONE 1 - CANCELLAZIONE DEI NUMERI CON DISPLAY NONE
 function myFunctionNumber(){
     // CANCELLAZIONE DEI NUMERI CON DISPLAY NONE
-    document.getElementById("random_number_one").style.display = "none";
+    document.getElementById("random").style.display = "none";
+
+ /* (SUPERATO)  
+  document.getElementById("random_number_one").style.display = "none";
     document.getElementById("random_number_two").style.display = "none";
     document.getElementById("random_number_three").style.display = "none";
     document.getElementById("random_number_four").style.display = "none";
-    document.getElementById("random_number_five").style.display = "none";
+    document.getElementById("random_number_five").style.display = "none"; */
 }
+
+/* // CREAZIONE DEI NUMERI RANDOM (SUPERATO)
+let r_number_one = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_two = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_three = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_four = parseInt(Math.floor(Math.random() * 100) + 1);
+let r_number_five = parseInt(Math.floor(Math.random() * 100) + 1); 
+*/
+
+/* // INSERIMENTO NEL DOM DEI NUMERI CASUALI (SUPERATO)
+document.getElementById("random_number_one").innerHTML = r_number_one;
+document.getElementById("random_number_two").innerHTML = r_number_two;
+document.getElementById("random_number_three").innerHTML = r_number_three;
+document.getElementById("random_number_four").innerHTML = r_number_four;
+document.getElementById("random_number_five").innerHTML = r_number_five;
+*/
 
 // CREAZIONE DEL TIMER PER I PROMPT
 setTimeout(myFunctionTimer, 31000);
@@ -80,6 +105,6 @@ function myFunctionTimer(){
     if (num1 === r_number_one && num2 === r_number_two && num3 === r_number_three && num4 === r_number_four && num5 === r_number_five){
         document.getElementById("results").innerHTML = (`HAI VINTO HAI MEMORIZZATO TUTTI I NUMERI!`);
     } else { 
-        document.getElementById("results").innerHTML = (`NON HAI MEMORIZZATO TUTTI I NUMERI, RIPROVA.`);
+        document.getElementById("results").innerHTML = (`NON HAI MEMORIZZATO TUTTI I NUMERI, RIPROVA.`); 
     }
-}
+} 
