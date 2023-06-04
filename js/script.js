@@ -44,6 +44,8 @@ for (let i = 0; i < 5; i++){
     }
 }
 
+console.log(random_number)
+
 // INSERIMENTO NEL DOM HTML
 document.getElementById("random").innerHTML = random_number;
 
@@ -53,7 +55,7 @@ setTimeout(function(){
     document.getElementById("random").style.display = "none"; // style cancellazione dei numeri
     document.getElementById("results").innerHTML = 'i 30 secondi sono scaduti, inserisci i numeri che ricordi';
 
-},5000);
+},30000);
 
 // CREAZIONE DEL TIMER PER I PROMPT - FUNZIONE 4 - CHE PERMETTE L'INSERIMENTO DEI NUMERI UTENTE
 setTimeout(function(){
@@ -65,14 +67,19 @@ setTimeout(function(){
     let score = 0; // punteggio utente dei numeri corretti
     
     for(let i=0; i<user_number.length; i++){
+
         if(random_number.includes(user_number[i])){
-        correct_number.push(user_number[i]);
-        score++;
+            correct_number.push(user_number[i]);
+            score++;
         }
-        
+       
     }
-
-    document.getElementById("results").innerHTML = `Hai indovinato ${score} numeri. I numeri corretti sono ${correct_number}`;
-
-
-},6000);
+     
+    if (score !== 0){
+        document.getElementById("results").innerHTML = `Hai indovinato ${score} numeri. I numeri corretti sono ${correct_number}`;
+    }
+    else if (score === 0){
+        document.getElementById("results").innerHTML = `Ci dispiace non hai indovinato nessun numero, ritenta.`;
+    }
+    
+},33000);
